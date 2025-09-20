@@ -12,7 +12,8 @@ import sys
 # Gunakan broker lokal dalam docker compose
 broker = "mqtt-broker"  # Service name
 port = 1883  # Port default untuk MQTT
-topic = "sister/temp"
+# topik (modified)
+topic = "sister/channel/kesehatan"
 
 # Callback ketika koneksi berhasil
 def on_connect(client, userdata, flags, rc, properties=None):
