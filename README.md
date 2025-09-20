@@ -1,5 +1,4 @@
 # Distributed Systems Practice - Containerized
-
 This repository demonstrates multiple distributed system communication patterns. Each section now has an isolated Docker / Docker Compose setup so the host Python environment remains untouched.
 
 ## Prerequisites

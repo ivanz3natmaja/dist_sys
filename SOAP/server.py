@@ -10,11 +10,11 @@ from spyne import Application, rpc, ServiceBase, Integer
 from spyne.protocol.soap import Soap11
 from spyne.server.wsgi import WsgiApplication
 
-# Membuat layanan SOAP dengan metode penjumlahan
+# Membuat layanan SOAP dengan metode perkalian selisih kuadrat (modified)
 class CalculatorService(ServiceBase):
     @rpc(Integer, Integer, _returns=Integer)
     def add(ctx, a, b):
-        return a + b
+        return ((a + b) * (a - b)) 
 
 # Membuat aplikasi SOAP dengan protokol Soap11
 app = Application([CalculatorService],

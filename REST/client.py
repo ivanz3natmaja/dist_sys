@@ -22,10 +22,10 @@ def call(endpoint, a, b):
             print(f"{endpoint} error {r.status_code}: {r.text}")
     except Exception as e:
         print(f"{endpoint} exception: {e}")
-
+#modified (minus)
 def main():
     parser = argparse.ArgumentParser(description="Simple REST client for add/mul endpoints")
-    parser.add_argument('--op', choices=['add','mul','both'], default='both', help='Operation to invoke')
+    parser.add_argument('--op', choices=['add','mul','both','min'], default='both', help='Operation to invoke')
     parser.add_argument('-a', type=int, default=10)
     parser.add_argument('-b', type=int, default=5)
     args = parser.parse_args()
@@ -33,6 +33,7 @@ def main():
         call('add', args.a, args.b)
     if args.op in ('mul','both'):
         call('mul', args.a, args.b)
-
+    if args.op in ('min','both'):
+        call('min', args.a, args.b)
 if __name__ == '__main__':
     sys.exit(main())
