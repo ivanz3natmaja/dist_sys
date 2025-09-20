@@ -13,7 +13,8 @@ import sys
 broker = "mqtt-broker"  # Service name
 port = 1883  # Port default untuk MQTT
 # topik (modified)
-topic = "sister/channel/kesehatan"
+# topic ="sister/channel/kesehatan"
+topic = "sister/channel/gaming"
 
 # Callback ketika koneksi berhasil
 def on_connect(client, userdata, flags, rc, properties=None):
